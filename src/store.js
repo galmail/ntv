@@ -10,6 +10,8 @@ export function reducer(state, action = {}) {
       return { ...state, messages: action.payload };
     case 'MEMBERS_LOADING_FULFILLED':
       return { ...state, members: action.payload };
+    case 'CHAT_LOADING_FULFILLED':
+      return { ...state, messages: action.payload };
     default:
       return state;
   }

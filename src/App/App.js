@@ -2,17 +2,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { getChatLog, getChatMembers } from '../service';
+import { getChatLog } from '../service';
 import Message from '../Message';
 
 import './App.css';
 
 class App extends Component {
 
-  componentDidMount(){
-    if (this.props.getChatLog && this.props.getChatMembers) {
+  componentDidMount() {
+    if (this.props.getChatLog) {
       this.props.getChatLog();
-      this.props.getChatMembers();
     }
   }
   
@@ -32,7 +31,7 @@ const mapStateToProps = state => {
   return state;
 };
 
-const mapDispatchToProps = dispatch => bindActionCreators({ getChatLog, getChatMembers }, dispatch);
+const mapDispatchToProps = dispatch => bindActionCreators({ getChatLog }, dispatch);
 
 export default connect(
   mapStateToProps,
