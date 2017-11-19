@@ -3,9 +3,27 @@
     padding: 10px;
     border: 1px solid;
     border-radius: 5px;
+    overflow: hidden;
+    clear: both;
 }
 
-.message .tooltip {
+.message .avatar {
+    float: left;
+    margin-right: 10px;
+}
+
+.message .message-body {
+    /* float: left; */
+}
+
+.message .avatar > img {
+    height: 50px;
+    width: 50px;
+}
+
+
+
+.message .message-body .tooltip {
     visibility: hidden;
     width: 120px;
     background-color: black;
@@ -19,6 +37,6 @@
     z-index: 1;
 }
 
-.message:hover .tooltip {
+.message .message-body:hover .tooltip {
     visibility: visible;
 }
