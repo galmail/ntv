@@ -12,8 +12,11 @@
     margin-right: 10px;
 }
 
-.message .message-body {
-    /* float: left; */
+.message .message-body .time {
+    font-size: smaller;
+    font-style: italic;
+    color: gray;
+    margin-top: 7px;
 }
 
 .message .avatar > img {
@@ -22,10 +25,9 @@
 }
 
 
-
 .message .message-body .tooltip {
     visibility: hidden;
-    width: 120px;
+    width: 240px;
     background-color: black;
     color: #fff;
     text-align: center;
@@ -35,6 +37,8 @@
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
+    margin-top: 20px;
+    right: 50px;
 }
 
 .message .message-body:hover .tooltip {
