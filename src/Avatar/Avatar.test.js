@@ -16,7 +16,9 @@ describe('Test Avatar Component', () => {
 
     it('should render without crashing', () => {
         const name = `${user.firstName} ${user.lastName}`;
-        expect(shallow(<Avatar imageUrl={user.avatar} imageName={name} />)).toMatchSnapshot();
+        const wrapper = shallow(<Avatar imageUrl={user.avatar} imageName={name} />);
+        expect(wrapper.contains(<img alt={name} src={user.avatar} />)).toBe(true);
+        expect(wrapper).toMatchSnapshot();
     });
 
 });
